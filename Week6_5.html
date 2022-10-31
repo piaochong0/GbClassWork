@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <script>
+            function fun(e){
+				alert(e.keyCode);
+			}
+			function img(){
+				alert("我来了")
+			}
+			 function message(){
+			    alert("你写了什么？")
+			}
+        </script>
+        <style>
+			#main{margin: 0 auto;
+				width: 400px;
+				height: 400px;
+				position: relative;}
+			img{
+				width: 400px;
+				height: 400px;
+			}
+			.box{
+				width: 180px;
+				height: 180px;
+				opacity: 0.2;
+				background: aqua;
+				position: absolute;
+			}
+			/* #box1{left: 60px;top: 30px;}
+			#box2{left: 250px;top: 30px;}
+			#box3{left: 60px;top: 220px;}
+			#box4{left: 250px;top: 220px;} */
+        </style>
+    </head>
+    <body onkeypress="fun(event)">
+		<div id="main">
+			<img src="./Yeal.JPG" alt="" onload="img()"><br>
+			<input type="text" id="demo" Onchange="message()"/>
+		</div>
+    </body>
+</html>

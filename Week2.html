@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#bigTable{
+				border: 3px solid blue;
+				width: auto;
+				height: auto;
+				background-color: azure;
+			}
+			#title{
+				text-align: center;
+			}
+			#button{
+				text-align: center
+			}
+			#leftTd{
+				text-align: center;
+				vertical-align: middle
+			}
+			tr,td{
+				border: 2px solid green;
+				text-align: left;
+				height: auto;
+				vertical-align: middle;
+			}
+			b{
+				color: red;
+			}
+			
+			#div1{
+				width: 400px;
+				height: 70px;
+				background-color: blue;
+				position: relative;
+			}
+			img{
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				margin-top: -1px;
+				margin-left: 0px;
+				
+			}
+			span{
+				font-family:"\96B6\4E66" ;
+				font-size: 32px;
+				color: white;
+				position: absolute;
+				margin-top: 15px;
+				margin-left: 80px;
+				
+				
+				
+			}
+			a{text-decoration: none;}
+		</style>
+	</head>
+	<body>
+		<!-- 9.23 作业 -->
+		<form name="form1" method="#" action="#"">
+			<label for=username>姓名</label>
+				<input name=username id=username type=text required /><br/>
+			<label for=age>年龄</label>
+				<input name=age id=age type=number min=0 max=100/><br/>
+			<label for=birthday>出生日期</label>
+				<input name=birthday id=birthday type=date /><br/>
+			<label for=email>Email</label>
+				<input name=email id=email type=email required /><br/>
+			<label for=url>个人主页</label>
+				<input name=url id=url type=url /><br/>
+			<label for=memo>个人简介</label>
+				<textarea name=memo id=memo required ></textarea><br/>
+			<input type=submit>
+		</form>
+	</body>
+</html>

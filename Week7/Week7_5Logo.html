@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        
+			用户名：<input name="username" id="username" /><br/>
+            密码：<input name="pwd" id="pwd" /><br/>
+            <input type="button" οnclick="login()" value="登录" />
+        
+        <script type="text/javascript">
+            
+           var usernames = ["hxx","diaocan"];
+           var pwds = ["123","222222"];
+              
+            //用户注册成功了之后才会到页面，
+            var url = window.location.href;
+            var arr = url.split("?");
+            var nameAndPwd = arr[1].split("&");
+            var names = nameAndPwd[0].split("=");
+            usernames.push(names[1]);
+
+            var pwd = nameAndPwd[1].split("=");
+            pwds.push(pwd[1])
+            console.log(usernames)
+            console.log(pwds)  
+            function login(){
+                var myName = document.getElementById("username").value;
+                var myPwd = document.getElementById("pwd").value;
+                var index = -1;
+                for (var i = 0; i < usernames.length; i++) {
+                    if(usernames[i] == myName){
+                        index = i;
+                        break;
+                    }
+                }
+                if(index == -1){
+                    alert("用户名或者密码错误，登录失败")
+                }else{                   
+                    if(pwds[index] == myPwd){
+                        alert("登录成功")
+                    }else{
+                        alert("登录失败")
+                    }                  
+                }   
+            }
+        </script> 
+    </body>
+</html>

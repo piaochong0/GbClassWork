@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+           
+    </head>
+    <body>
+        
+        用户名：<input id="uname" name="username"/>
+		<br>
+        密码 ：<input id="pwd" name="password"/>
+		<br>
+        <button οnclick="zhuCe()">立即注册</button>
+        
+        <script>
+            
+            var usernames = ["hxx","diaocan"];
+            var pwds = ["123","222222"];
+            
+            //校验用户输入的内容
+            function zhuCe(){
+                //获取用户输入的内容
+                var unam = document.getElementById("uname").value;
+                var pw = document.getElementById("pwd").value;
+                var first = unam.charAt(0)+"";
+                var num = "ABCDEFGHJKLMNOPQRSTUVWXYZ";
+                var index = num.indexOf(first);
+                
+                console.log(unam)
+                console.log(pw)
+                console.log(index)
+                console.log(unam.length)
+                console.log(pw.length)
+                
+                if(unam.length >= 6 && unam.length <= 12 && index >= 0 && pw.length >=6 && pw.length <= 12){
+                    alert("注册成功");
+                    window.location = "http://127.0.0.1:8020/Week7/Week7_5Logo.html?unam="+unam+"&pw=pw"
+                }else{
+                    alert("注册失败");
+                }
+                
+            }
+            
+            
+            
+        </script>
+        
+    </body>
+</html>

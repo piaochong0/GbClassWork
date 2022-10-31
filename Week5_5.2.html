@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <style>
+        .vistor{
+            width:50px;
+	        height:50px;
+	        background:blue;
+            transition:width 0.5s;
+        }
+        .student{
+            width:50px;
+	        height:50px;
+	        background:red;
+            transition:width 0.5s;
+        }
+        div:hover {
+	        width:150px;
+           height: 50px;
+        }
+        div:hover span{
+	        width:150px;
+           height: 50px;
+           display: block;
+           position: relative;
+           top: 16px;
+           left: 10px;
+        }
+        div:hover i{
+            position: relative;
+            left: 100px;
+            top: -50px;
+        }
+        span{
+           color: white;
+        }
+		.word{
+			display: none;
+		}
+        i{
+            color: white;
+            margin-top: 16px;
+            margin-left: 16px;
+        }
+    </style>
+    <body>
+        <div class="vistor">
+            <span class="word">访客 Vistor</span>
+            <i class="glyphicon glyphicon-globe" aria-hidden="true" ></i>
+        </div>
+        <div class="student">
+            <span class="word">学生 Student</span>
+            <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+        </div>
+    </body>
+</html>

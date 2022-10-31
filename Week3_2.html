@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#bigTable{
+				border: 3px solid blue;
+				width: auto;
+				height: auto;
+				background-color: azure;
+			}
+			#title{
+				text-align: center;
+			}
+			#button{
+				text-align: center
+			}
+			#leftTd{
+				text-align: center;
+				vertical-align: middle
+			}
+			tr,td{
+				border: 2px solid green;
+				text-align: left;
+				height: auto;
+				vertical-align: middle;
+			}
+			b{
+				color: red;
+			}
+			
+			#div1{
+				width: 400px;
+				height: 70px;
+				background-color: blue;
+				position: relative;
+			}
+			img{
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				margin-top: -1px;
+				margin-left: 0px;
+				
+			}
+			span{
+				font-family:"\96B6\4E66" ;
+				font-size: 32px;
+				color: white;
+				position: absolute;
+				margin-top: 15px;
+				margin-left: 80px;
+				
+				
+				
+			}
+			a{text-decoration: none;}
+		</style>
+	</head>
+	<body>
+		<!-- 9.27作业 -->
+		<table id="bigTable" align="center">
+			<tr align="center">
+				<td id="title" colspan="2"><b>信息统计表</b></td>
+			</tr>
+			<tr>
+				<td id="leftTd">姓名：</td>
+				<td>
+					<input type="text" name="userName"/>
+				</td>
+			</tr>
+			<tr>
+				<td id="leftTd">年龄：</td>
+				<td>
+					<input  type="password" name="passWord"/>
+				</td>
+			</tr>
+			<tr>
+				<td id="leftTd">姓别：</td>
+				<td>
+					<input type="radio" name="sex" value="1"/>男
+					<input type="radio" name="sex" value="0"/>女
+				</td>
+			</tr>
+			<tr>
+				<td id="leftTd">爱好：</td>
+				<td>
+					<input type="checkbox" name="hobby" value="1"/>旅游<br />
+					<input type="checkbox" name="hobby" value="2"/>登山<br />
+					<input type="checkbox" name="hobby" value="3"/>健身<br />
+					<input type="checkbox" name="hobby" value="4"/>上网<br />
+					<input type="checkbox" name="hobby" value="5"/>游泳
+				</td>
+			</tr>
+			<tr>
+				<td id="leftTd">学历：</td>
+				<td>
+					<select name="grade">
+						<option value="1">专科</option>
+						<option value="2">本科</option>
+						<option value="3">硕士</option>
+						<option value="4">博士及以上</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="leftTd">自我介绍：</td>
+				<td>
+					<textarea rows="6" cols="15" placeholder="自我介绍："></textarea>
+				</td>
+			</tr>
+			<tr align="center">
+				<td id="button"colspan="2">
+					<input type="submit" value="提交"/>
+					<input type="reset" value="重置"/>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
