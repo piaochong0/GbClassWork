@@ -7,7 +7,7 @@
         var userid=document.login.userid.value;
         var password=document.login.password.value;
         var blood=document.getElementsByName("blood")
-		var like=document.getElementsByName("like");
+	var like=document.getElementsByName("like");
         var flag=false;
         if(document.login.userid.value==""){
             alert("账号不能为空！")
@@ -32,8 +32,8 @@
         if(!flags){
             alert("必须要选择血型!")
         }     
-        for(var i=0;i<nature.length;i++){
-            if(nature[i].checked){
+        for(var i=0;i<like.length;i++){
+            if(like[i].checked){
                 flag=true;
                 break;
             }
