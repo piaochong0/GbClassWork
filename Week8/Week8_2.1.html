@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="lg-container">
+	  <form action=""  id="lg-form" name="lg-form" method="post">
+		<div>
+			<label for="pwdId">新密码：</label>
+			<input type="password" name="password" id="pwd1" placeholder="新密码"/>
+		</div>
+		<div>
+			<label for="newPwdId"  style="float:left">确认密码：</label>
+			<input type="password" name="newPassword" id="pwd2" placeholder="确认密码" />
+		</div>
+		<div>
+			<button type="submit" id="login">提交</button>
+		</div>
+	  </form>
+	</div>   
+</body>
+
+<script>
+	var lgform=document.getElementById("lg-form");
+	var password=document.getElementById("pwd1");
+	var newPassword=document.getElementById("pwd2");
+		lgform.onsubmit=function(){
+			if(password.value=="" || password.value==null){
+				alert("新密码不能为空,请输入");
+				return false;
+			}else if(password.value.length<6 || newPassword.value.length<6){
+				alert("输入的密码必须大于6位");
+				return false;
+			}else if(newPassword.value=="" || newPassword.value==null){
+				alert("确认密码不能为空,请输入");
+				return false;
+			}else if(password.value!=newPassword.value){
+				alert("两次密码不一样,请重新输入");
+				password.value="";
+				newPassword.value="";
+				return false;
+			}else{
+				return true;
+			}
+		}
+</script>
+
+</html>

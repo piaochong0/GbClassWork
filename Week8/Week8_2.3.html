@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+     function define(){
+        var userid=document.login.userid.value;
+        var password=document.login.password.value;
+        var blood=document.getElementsByName("blood")
+		var like=document.getElementsByName("like");
+        var flag=false;
+        if(document.login.userid.value==""){
+            alert("账号不能为空！")
+        }
+        if(document.login.password.value==""){
+            alert("密码不能为空！")
+        }
+        if(password.length < 6 ){
+            alert("密码的长度必须大于等于6");
+            return false;
+        }
+        if(!document.login.man.checked && !document.login.woman.checked){
+            alert("必须要选择性别！")
+        }
+        var flags=0
+        for(var i=0;i<blood.length;i++){
+            if(blood.item(i).checked==true){
+                flags=1;
+                break;
+            }
+        }
+        if(!flags){
+            alert("必须要选择血型!")
+        }     
+        for(var i=0;i<nature.length;i++){
+            if(nature[i].checked){
+                flag=true;
+                break;
+            }
+        }
+        if(!flag){
+            alert("爱好至少要选择一项！");
+            return false;
+        } 
+     }
+     
+    </script>
+</head>
+<body>
+    <form action="#" name="login">
+       <table>
+          <tr>
+            <td>账号：<input type="text" name="userid" /></td>
+          </tr>
+          <tr>
+            <td>密码：<input type="password" name="password" required/></td>
+          </tr>
+          <tr>
+            <td>性别：<input type="radio" name="man" value="man"/>男 <input type="radio" name="woman" value="woman"/>女</td>
+          </tr>
+          <tr>
+            <td>
+                血型：<input type="radio" name="blood" value="O"/>O
+                      <input type="radio" name="blood" value="A"/>A
+                      <input type="radio" name="blood" value="B"/>B
+                      <input type="radio" name="blood" value="Other"/>其它
+            </td>
+          </tr>
+          <tr>
+            <td>
+               爱好：<input type="checkbox" name="like" value="热情大方">足球
+                    <input type="checkbox" name="like" value="温柔体贴">阅读
+                    <input type="checkbox" name="like" value="多愁善感">游戏
+            </td>
+          </tr>
+          <tr>
+            <td>
+                文件：<input type="text" name="files"><input type="file" name="file">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                简介：<input type="textarea">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                城市：<select>
+                        <option>北京市</option>
+                        <option>上海市</option>
+                        <option>成都市</option>
+                        <option>西安市</option>
+                      </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <input type="submit" value="提交" onclick="define()">
+                <input type="reset" value="重置">
+            </td>
+          </tr>
+       </table>
+    </form>
+    
+</body>
+</html>
